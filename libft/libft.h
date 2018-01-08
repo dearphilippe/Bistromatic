@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/24 12:49:11 by passef            #+#    #+#             */
-/*   Updated: 2018/01/03 22:16:41 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/08 13:27:06 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stdio.h>
+# include <fcntl.h>
+
+# define BUFF_SIZE 5000
+
 
 typedef struct	s_list
 {

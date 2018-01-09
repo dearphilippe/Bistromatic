@@ -6,7 +6,7 @@
 #    By: passef <passef@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/23 22:58:59 by passef            #+#    #+#              #
-#    Updated: 2018/01/08 20:45:07 by passef           ###   ########.fr        #
+#    Updated: 2018/01/08 21:21:32 by passef           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,8 @@ $(NAME): $(OBJ)
 %.o: %.c
 	@$(CC) $(FLAGS) -c $< -o $@
 	@echo "\033[K$(YELLOW)[bistromatic] :$(ERASE) $(GREEN)Compiling $<$(ERASE) \033[1A";
+norm:
+	@norminette *c
 clean:
 	@$(RM) $(OBJ)
 	@make $(LFT) clean

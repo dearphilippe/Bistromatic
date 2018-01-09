@@ -3,7 +3,9 @@
 		"bistromatic.h": "c",
 		"libft.h": "c",
 		"unistd.h": "c",
-		"stddef.h": "c"
+		"stddef.h": "c",
+		"printf.h": "c",
+		"stdlib.h": "c"
 	},
     "files.autoSave": "afterDelay",
     "editor.renderWhitespace": "boundary",

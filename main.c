@@ -6,13 +6,13 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:12:42 by passef            #+#    #+#             */
-/*   Updated: 2018/01/08 20:05:44 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/08 21:20:18 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bistromatic.h"
 
-static void		set_zero(t_env *e)
+static void		init(t_env *e)
 {
 	e->sign[0] = '*';
 	e->sign[1] = '/';
@@ -27,13 +27,13 @@ static void		set_zero(t_env *e)
 void			store_data(t_env *e, char *line, char ***av)
 {
 	e->len_op = ft_atoi(av[0][2]);
-	e->op = malloc(sizeof(e->op) * e->len_op + 1);
+	// e->base_str = malloc(sizeof(e->base_str) * ft_strlen(av[0][1]) + 1);
+	e->base_str = av[0][1];
+	if(!(e->op = malloc(sizeof(e->op) * e->len_op + 1)))
+		exit(EXIT_FAILURE);
 	parsing(e, line);
-
-	if (ft_isdigit(e->op[e->len_op - 1]))
-		e->base = e->op[e->len_op] - 1;
-	else
-		handle_base(e);
+	printf("%s", e->op);
+	handle_base(e);
 }
 
 int				main (int ac, char **av)
@@ -43,7 +43,7 @@ int				main (int ac, char **av)
 		t_env	e;
 		char echo[256] = {"echo '3+6'"};
 
-		set_zero(&e);
+		init(&e);
 		store_data(&e, echo, &av);
 
 		//if (get_next_line(0, &line))

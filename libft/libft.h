@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/24 12:49:11 by passef            #+#    #+#             */
-/*   Updated: 2018/01/08 21:20:30 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/08 22:14:37 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,4 +113,5 @@ char			*ft_strrev(char *s);
 int				ft_size_bin(unsigned int value);
 size_t			ft_lstsize(t_list *lst);
 int				get_next_line(const int fd, char **line);
+
 #endif

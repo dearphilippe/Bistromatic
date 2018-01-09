@@ -6,12 +6,23 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:18:08 by passef            #+#    #+#             */
-/*   Updated: 2018/01/08 21:06:31 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/08 22:04:35 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _BISTROMATIC_H_
 #define _BISTROMATIC_H_
+
+#define B10 0123456789
+#define B9 012345678
+#define B8 01234567
+#define B7 0123456
+#define B6 012345
+#define B5 01234
+#define B4 0123
+#define B3 012
+#define B2 01
+#define B1 0
 
 #include "./libft/libft.h"
 

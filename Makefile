@@ -6,7 +6,7 @@
 #    By: passef <passef@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/23 22:58:59 by passef            #+#    #+#              #
-#    Updated: 2018/01/08 21:21:32 by passef           ###   ########.fr        #
+#    Updated: 2018/01/08 22:28:45 by passef           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,8 @@ SRC =	main.c \
 		libft/ft_atoi.c \
 		libft/ft_strcpy.c \
 		libft/ft_isdigit.c \
+		libft/ft_isascii.c \
+		libft/ft_isprint.c \
 
 OBJ = $(SRC:.c=.o)
 CC = gcc
@@ -49,7 +51,10 @@ $(NAME): $(OBJ)
 	@$(CC) $(FLAGS) -c $< -o $@
 	@echo "\033[K$(YELLOW)[bistromatic] :$(ERASE) $(GREEN)Compiling $<$(ERASE) \033[1A";
 norm:
-	@norminette *c
+	@echo "norminetting C Files..."
+	@norminette *.c
+	@echo "norminetting Libft..."
+	@norminette libft/*.c
 clean:
 	@$(RM) $(OBJ)
 	@make $(LFT) clean

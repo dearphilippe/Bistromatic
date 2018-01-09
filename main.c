@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:12:42 by passef            #+#    #+#             */
-/*   Updated: 2018/01/08 21:20:18 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/08 22:40:18 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void			store_data(t_env *e, char *line, char ***av)
 	if(!(e->op = malloc(sizeof(e->op) * e->len_op + 1)))
 		exit(EXIT_FAILURE);
 	parsing(e, line);
-	printf("%s", e->op);
 	handle_base(e);
 }
 
@@ -46,7 +45,7 @@ int				main (int ac, char **av)
 		init(&e);
 		store_data(&e, echo, &av);
 
-		//if (get_next_line(0, &line))
+		//if (!(get_next_line(0, &line)))
 		//	return (0);
 		free(e.op);
 	}

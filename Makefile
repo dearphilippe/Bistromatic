@@ -6,7 +6,7 @@
 #    By: passef <passef@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/23 22:58:59 by passef            #+#    #+#              #
-#    Updated: 2018/01/08 16:51:05 by passef           ###   ########.fr        #
+#    Updated: 2018/01/08 19:22:04 by passef           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,9 @@ NAME =	libft.a
 LIBFT = libft/libft.a
 
 SRC =	main.c \
+		parsing.c \
+		operations.c \
+		handler.c \
 		libft/ft_get_next_line.c \
 		libft/ft_strjoin.c \
 		libft/ft_strlen.c \
@@ -23,6 +26,7 @@ SRC =	main.c \
 		libft/ft_strcmp.c \
 		libft/ft_atoi.c \
 		libft/ft_strcpy.c \
+		libft/ft_isdigit.c \
 
 OBJ = $(SRC:.c=.o)
 CC = gcc

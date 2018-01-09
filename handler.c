@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 14:34:21 by passef            #+#    #+#             */
-/*   Updated: 2018/01/08 16:39:50 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/08 19:20:56 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void		handle_base(t_env *e)
 {
-	
+	printf("Incompatible base %s", e->op);
 }

@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 13:19:18 by passef            #+#    #+#             */
-/*   Updated: 2018/01/08 19:53:49 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/09 06:53:42 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void		parsing(t_env *e, char *line)
 {
 	int i;
 	int j;
+
 	i = 0;
 	j = 0;
-	
-	while(line[i] != 0)
+	while (line[i] != 0)
 	{
-		if(line[i] == '\'')
+		if (line[i] == '\'')
 		{
 			i++;
 			while (line[i] != '\'')
@@ -33,16 +33,14 @@ void		parsing(t_env *e, char *line)
 		}
 		i++;
 	}
-
 	e->op[j] = '\0';
+}
+
 
 	/*
-	
 	e->sign == '+' ? add(*n1, *n2) : 0;
 	e->sign == '-' ? subs(*n1, *n2) : 0;
 	e->sign == '*' ? mult(*n1, *n2) : 0;
 	e->sign == '/' ? division(*n1, *n2) : 0;
 	e->sign == '%' ? mod(*n1, *n2) : 0;
-	
 	*/
-}

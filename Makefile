@@ -6,7 +6,7 @@
 #    By: passef <passef@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/23 22:58:59 by passef            #+#    #+#              #
-#    Updated: 2018/01/08 19:22:04 by passef           ###   ########.fr        #
+#    Updated: 2018/01/08 20:45:07 by passef           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,25 +35,25 @@ RM = rm -rf
 INC = -I includes/
 FT = -I libft/
 LFT = -C libft/
-CG = \033[92m
-CY =  \033[93m
-CE = \033[0m
+GREEN = \033[92m
+YELLOW =  \033[93m
+ERASE = \033[0m
 
 all: $(NAME)
 $(NAME): $(OBJ)
-	@echo "\033[K$(CY)[bistromatic] :$(CE) $(CG)Creating Library$(CE)\033[1A";
+	@echo "\033[K$(YELLOW)[bistromatic] :$(ERASE) $(GREEN)Creating Library$(ERASE)\033[1A";
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "\033[K$(CY)[bistromatic] :$(CE) $(CG)bistromatic Compiled!$(CE)";
+	@echo "\033[K$(YELLOW)[bistromatic] :$(ERASE) $(GREEN)bistromatic Compiled!$(ERASE)";
 %.o: %.c
 	@$(CC) $(FLAGS) -c $< -o $@
-	@echo "\033[K$(CY)[bistromatic] :$(CE) $(CG)Compiling $<$(CE) \033[1A";
+	@echo "\033[K$(YELLOW)[bistromatic] :$(ERASE) $(GREEN)Compiling $<$(ERASE) \033[1A";
 clean:
 	@$(RM) $(OBJ)
 	@make $(LFT) clean
-	@echo "\033[K$(CY)[bistromatic] :$(CE) $(CG)Cleaning Object files $(CE)";
+	@echo "\033[K$(YELLOW)[bistromatic] :$(ERASE) $(GREEN)Cleaning Object files $(ERASE)";
 fclean: clean
 	@$(RM) $(NAME)
 	@make $(LFT) fclean
-	@echo "\033[K$(CY)[bistromatic] :$(CE) $(CG)Cleaning bistromatic $(CE)";
+	@echo "\033[K$(YELLOW)[bistromatic] :$(ERASE) $(GREEN)Cleaning bistromatic $(ERASE)";
 re: fclean all

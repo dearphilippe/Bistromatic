@@ -1,6 +1,12 @@
 {
-    "files.associations": {
-        "bistromatic.h": "c",
-        "libft.h": "c"
-    }
+	"files.associations": {
+		"bistromatic.h": "c",
+		"libft.h": "c",
+		"unistd.h": "c",
+		"stddef.h": "c"
+	},
+    "files.autoSave": "afterDelay",
+    "editor.renderWhitespace": "boundary",
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false
 }

@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 14:34:21 by passef            #+#    #+#             */
-/*   Updated: 2018/01/08 23:01:35 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/08 23:04:54 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void		handle_base(t_env *e)
 		i++;
 	}
 	if (e->base_str[i] == '\0')
-		printf("...");
+		printf("..");
 	else
 		exit(EXIT_FAILURE);
 }

@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 14:34:21 by passef            #+#    #+#             */
-/*   Updated: 2018/01/09 06:51:08 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/09 15:40:07 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,29 @@ int			check_doublon(char *str)
 	return (1);
 }
 
+int	check_brackets(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == '(')
+		{
+			i++;
+			while (s[i])
+			{
+				if (s[i] == ')')
+					return (1);
+				else
+					return (0);
+			}
+		}
+		i++;
+	}
+	return (0);
+}
+
 void		handle_base(t_env *e)
 {
 	int i;
@@ -60,8 +83,7 @@ void		handle_base(t_env *e)
 		e->base++;
 		i++;
 	}
-	if (e->base_str[i] == '\0')
-		printf("..");
-	else
+	check_brackets(e->base_str);
+	if (e->base_str[i] != '\0')
 		exit(EXIT_FAILURE);
 }

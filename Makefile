@@ -6,7 +6,7 @@
 #    By: passef <passef@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/23 22:58:59 by passef            #+#    #+#              #
-#    Updated: 2018/01/08 22:28:45 by passef           ###   ########.fr        #
+#    Updated: 2018/01/09 16:10:51 by passef           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRC =	main.c \
 		libft/ft_isdigit.c \
 		libft/ft_isascii.c \
 		libft/ft_isprint.c \
+		libft/ft_putchar.c \
 
 OBJ = $(SRC:.c=.o)
 CC = gcc

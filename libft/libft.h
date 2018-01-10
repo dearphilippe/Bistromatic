@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/24 12:49:11 by passef            #+#    #+#             */
-/*   Updated: 2018/01/08 22:14:37 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/10 11:47:08 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char			*ft_strdup(const char *s);
 char			*ft_strcpy(char *dst, const char *src);
 char			*ft_strncpy(char *dst, const char *src, size_t n);
 char			*ft_strcat(char *restrict s1, const char *restrict s2);
-char 			*ft_strncat(char *s1, const char *s2, size_t n);
+char			*ft_strncat(char *s1, const char *s2, size_t n);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
@@ -113,5 +113,6 @@ char			*ft_strrev(char *s);
 int				ft_size_bin(unsigned int value);
 size_t			ft_lstsize(t_list *lst);
 int				get_next_line(const int fd, char **line);
+char			*ft_extract_fd(char *str, char c);
 
 #endif

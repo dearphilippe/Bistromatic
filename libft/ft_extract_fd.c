@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_extract_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/20 15:23:13 by passef            #+#    #+#             */
-/*   Updated: 2018/01/10 11:02:09 by passef           ###   ########.fr       */
+/*   Created: 2018/01/10 11:27:40 by passef            #+#    #+#             */
+/*   Updated: 2018/01/10 11:54:50 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(const char *s)
+char	*ft_extract_fd(char *str, char c)
 {
-	unsigned int i;
+	int		i;
+	int		j;
+	char	*tmp = ft_strnew(ft_strlen(str));
 
-	if (!s)
-		return ;
-	i = ft_strlen(s);
-	write(1, s, i);
+	i = 0;
+	j = 0;
+	while (str[i])
+	{
+		if (str[i] == c)
+		{
+			i++;
+			while (str[i] != c)
+			{
+				tmp[j] = str[i];
+				i++;
+				j++;
+			}
+		}
+		i++;
+	}
+	tmp[j] = '\0';
+	return (tmp);
 }

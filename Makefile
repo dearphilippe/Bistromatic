@@ -6,42 +6,46 @@
 #    By: passef <passef@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/23 22:58:59 by passef            #+#    #+#              #
-#    Updated: 2018/01/10 11:54:48 by passef           ###   ########.fr        #
+#    Updated: 2018/01/12 11:47:08 by passef           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME =		libft.a
+LIBFT =		libft/libft.a
 
-NAME =	libft.a
-LIBFT = libft/libft.a
+SRC =		main.c \
+			parsing.c \
+			operations.c \
+			handler.c \
+			stack.c \
+			validate.c \
+			libft/ft_get_next_line.c \
+			libft/ft_strjoin.c \
+			libft/ft_strlen.c \
+			libft/ft_strnew.c \
+			libft/ft_bzero.c \
+			libft/ft_strcmp.c \
+			libft/ft_atoi.c \
+			libft/ft_strcpy.c \
+			libft/ft_isdigit.c \
+			libft/ft_isascii.c \
+			libft/ft_isprint.c \
+			libft/ft_putchar.c \
+			libft/ft_extract_fd.c \
+			libft/ft_memcpy.c \
+			libft/ft_putstr.c \
+			libft/ft_strchr.c \
 
-SRC =	main.c \
-		parsing.c \
-		operations.c \
-		handler.c \
-		libft/ft_get_next_line.c \
-		libft/ft_strjoin.c \
-		libft/ft_strlen.c \
-		libft/ft_strnew.c \
-		libft/ft_bzero.c \
-		libft/ft_strcmp.c \
-		libft/ft_atoi.c \
-		libft/ft_strcpy.c \
-		libft/ft_isdigit.c \
-		libft/ft_isascii.c \
-		libft/ft_isprint.c \
-		libft/ft_putchar.c \
-		libft/ft_extract_fd.c \
-
-OBJ = $(SRC:.c=.o)
-CC = gcc
-FLAGS = -Wall -Wextra -Werror
-RM = rm -rf
-INC = -I includes/
-FT = -I libft/
-LFT = -C libft/
-GREEN = \033[92m
-YELLOW =  \033[93m
-ERASE = \033[0m
+OBJ =		$(SRC:.c=.o)
+CC =		gcc
+FLAGS =		-Wall -Wextra -Werror
+RM =		rm -rf
+INC =		-I includes/
+FT =		-I libft/
+LFT =		-C libft/
+GREEN =		\033[92m
+YELLOW =	\033[93m
+ERASE =		\033[0m
 
 all: $(NAME)
 $(NAME): $(OBJ)

@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/24 12:49:11 by passef            #+#    #+#             */
-/*   Updated: 2018/01/10 11:47:08 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/11 11:03:35 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef struct	s_octect
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
-void 			*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t			ft_strlen(const char *s);
@@ -104,7 +104,8 @@ void			ft_lstrev(t_list **lst);
 void			ft_lstclr(t_list **lst);
 t_list			*ft_lstcat(t_list **lst1, t_list *lst2);
 t_list			*ft_lstjoin(t_list *lst1, t_list *lst2);
-t_list			*ft_lstfind(t_list *begin_list, void *content_ref, int (*cmp)());
+t_list			*ft_lstfind(t_list *begin_list,
+				void *content_ref, int (*cmp)());
 int				ft_strisalpha(const char *str);
 int				ft_strisnum(const char *str);
 int				ft_strisalnum(const char *str);

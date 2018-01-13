@@ -5,9 +5,13 @@
 		"unistd.h": "c",
 		"stddef.h": "c",
 		"printf.h": "c",
-		"stdlib.h": "c"
+		"stdlib.h": "c",
+		"stack.h": "c",
+		"queue.h": "c",
+		"memory": "c",
+		"utility": "c"
 	},
-    "files.autoSave": "afterDelay",
+	"files.autoSave": "onFocusChange",
     "editor.renderWhitespace": "boundary",
     "editor.insertSpaces": false,
     "editor.detectIndentation": false

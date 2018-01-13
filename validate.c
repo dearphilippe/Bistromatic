@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/09 16:54:33 by passef            #+#    #+#             */
-/*   Updated: 2018/01/09 22:31:19 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/12 01:40:07 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,13 +79,11 @@ int		validate_input(t_env *e)
 	int res;
 
 	res = 0;
-	if (!(chk_operand(e)))
+	if (!chk_operand(e))
 		return (0);
 	if (!(e->input[ft_strlen(e->input) - 1] == ')'))
 		return (0);
-	if (!(chk_operand(e)))
-		return (0);
-	if (!(chk_next_i(e)))
+	if (!chk_next_i(e))
 		return (0);
 
 	return (res);

@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/22 13:26:07 by passef            #+#    #+#             */
-/*   Updated: 2017/04/27 10:48:53 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/10 19:12:58 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char	*ft_strcpy(char *dst, const char *src)
 	int c;
 
 	c = 0;
-	while (src[c] != 0)
+	while (src[c] != '\0')
 	{
 		dst[c] = src[c];
 		c++;
 	}
-	dst[c] = 0;
+	dst[c] = '\0';
 	return (dst);
 }

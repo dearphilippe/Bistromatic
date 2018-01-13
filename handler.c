@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 14:34:21 by passef            #+#    #+#             */
-/*   Updated: 2018/01/09 15:40:07 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/11 00:38:30 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void		handle_base(t_env *e)
 	{
 		if (e->base_str[i] == e->base_str[i + 1])
 			exit(EXIT_FAILURE);
-		e->base++;
+		e->base_inp++;
 		i++;
 	}
 	check_brackets(e->base_str);

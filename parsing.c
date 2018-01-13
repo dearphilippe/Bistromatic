@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 13:19:18 by passef            #+#    #+#             */
-/*   Updated: 2018/01/12 16:08:53 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/13 10:48:43 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ int		parsing(t_env *e)
 	int i;
 
 	i = 0;
+	s_stackToken *st = new_stack();
 	if (!(validate_input(e)))
 		return (0);
 	while (e->input[i])
 	{
-		if (ft_strchr(e->base_str, e->input[i]))
-			//push_stack(e->input[i]);
+		if (ft_isdigit(e->input[i]) && ft_strchr(e->base_str, e->input[i]))
+			push_stack(e, st, &e->input[i]);
+		if (ft_isops(e->input[i]))
 		i++;
 	}
 	if (!(e->input[i] && ft_strchr(e->base_str, e->input[i])))

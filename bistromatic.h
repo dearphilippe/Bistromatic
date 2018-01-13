@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:18:08 by passef            #+#    #+#             */
-/*   Updated: 2018/01/12 17:12:06 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/13 10:47:12 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ typedef struct			s_env
 	char				*result;
 }						t_env;
 
-# include "stack.h"
-# include "queue.h"
+#include "queue.h"
+#include "stack.h"
 
 int						parsing(t_env *e);
 void					handle_base(t_env *e);

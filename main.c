@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:12:42 by passef            #+#    #+#             */
-/*   Updated: 2018/01/12 12:39:05 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/13 09:46:05 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int			get_data(t_env *e, char ***av)
 */
 
 /**
-** Si la base est inferieur a 2 
+** Si la base est inferieur a 2
 **/
 
 int				main(int ac, char **av)

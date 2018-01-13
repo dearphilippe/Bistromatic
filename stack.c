@@ -6,11 +6,11 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 11:42:56 by passef            #+#    #+#             */
-/*   Updated: 2018/01/13 00:00:34 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/13 10:36:03 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bistromatic.h"
+#include "stack.h"
 
 int is_empty_stack(stack st)
 {
@@ -101,12 +101,4 @@ stack clear_stack(stack st)
 		st = pop_stack(st);
 
 	return new_stack();
-}
-
-int main(void)
-{
-	tkn = new_stack();
-	push_stack();
-	
-	return (0);
 }

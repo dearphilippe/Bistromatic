@@ -17,7 +17,7 @@
 
 typedef struct			s_stackToken
 {
-	char *c;
+	char				*c;
 	struct s_stackToken *next;
 }						s_stackToken, *stack;
 

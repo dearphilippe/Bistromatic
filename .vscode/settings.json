@@ -11,7 +11,7 @@
 		"memory": "c",
 		"utility": "c"
 	},
-	"files.autoSave": "onFocusChange",
+	"files.autoSave": "afterDelay",
     "editor.renderWhitespace": "boundary",
     "editor.insertSpaces": false,
     "editor.detectIndentation": false

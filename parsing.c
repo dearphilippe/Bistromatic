@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 13:19:18 by passef            #+#    #+#             */
-/*   Updated: 2018/01/13 20:24:54 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/13 23:38:19 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		is_predecence(char c, stack st)
 	int i;
 	
 	i = 0;
-	if (c == st->c)
+	if (c == st->c )
 	return (0);
 }
 
@@ -37,14 +37,14 @@ int		parsing(t_env *e)
 	}
 	while (e->input[i])
 	{
-		if (ft_isdigit(e->input[i])))
+		if (ft_isdigit(e->input[i]))
 			push_queue(&e->input[i]);
 		if (ft_isops(e->input[i]))
 		{
 			while (!is_empty_stack(st) && st->c )
 			// While there's an operator on the top of the stack with greater precedence:
 			{
-
+				
 				// Pop operators from the stack onto the output queue
 				st = st->next;
 			}

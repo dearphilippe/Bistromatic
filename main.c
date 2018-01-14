@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:12:42 by passef            #+#    #+#             */
-/*   Updated: 2018/01/13 09:46:05 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/13 18:37:18 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,22 @@ static void		init(t_env *e)
 {
 	e->express[0] = '+';
 	e->express[1] = '-';
-	e->express[2] = '*';
+	e->express[2] = '%';
 	e->express[3] = '/';
-	e->express[4] = '%';
+	e->express[4] = '*';
+	e->express[5] = '\0';
 	e->base_inp = 0;
 	e->len_inp = 0;
 	ft_bzero(e->input, e->len_inp);
 }
 
 /*
+
 ** get lenght of stdin (operations)
 ** get line of operations and store it
 ** rent a space for store the operations
 ** check if the lenght match
+
 */
 
 int			get_data(t_env *e, char ***av)

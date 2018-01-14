@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bistromatic.h"
+#include "queue.h"
 
 int is_empty_queue(void)
 {
@@ -49,7 +49,7 @@ void print_queue(void)
 		return;
 	}
 
-	queueItem *tmp = first;
+	t_queueItem *tmp = first;
 
 	while(tmp != NULL)
 	{
@@ -61,7 +61,7 @@ void print_queue(void)
 
 void push_queue(char *c)
 {
-	queueItem *item;
+	t_queueItem *item;
 
 	item = malloc(sizeof(*item));
 
@@ -96,7 +96,7 @@ void pop_queue(void)
 		return;
 	}
 
-	queueItem *tmp = first;
+	t_queueItem *tmp = first;
 
 	if(first == last)
 	{

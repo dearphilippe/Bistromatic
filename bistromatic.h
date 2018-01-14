@@ -6,7 +6,7 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:18:08 by passef            #+#    #+#             */
-/*   Updated: 2018/01/13 10:47:12 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/13 18:37:16 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct			s_env
 	char				*input;
 	int					base_inp;
 	char				*base_str;
-	char				express[5];
+	char				express[6];
 	int					status;
 	char				*result;
 }						t_env;

@@ -14,6 +14,8 @@
 # define BISTROMATIC_H
 
 # include "./libft/libft.h"
+# include "queue.h"
+# include "stack.h"
 
 typedef struct			s_env
 {
@@ -26,12 +28,8 @@ typedef struct			s_env
 	char				*result;
 }						t_env;
 
-#include "queue.h"
-#include "stack.h"
-
 int						parsing(t_env *e);
 void					handle_base(t_env *e);
-
 int						ft_mult(int *n1, int *n2);
 int						ft_division(int *n1, int *n2);
 int						ft_add(int *n1, int *n2);

@@ -21,7 +21,7 @@ int		chk_operand(t_env *e)
 	i = 0;
 	j = 0;
 	res = 0;
-	while(e->input[i])
+	while (e->input[i])
 	{
 		if (!(ft_strchr(e->base_str, e->input[i])))
 		{
@@ -54,7 +54,7 @@ int		chk_next_i(t_env *e)
 
 	i = 0;
 	res = 0;
-	while(e->input[i])
+	while (e->input[i])
 	{
 		if (e->input[i] == '+')
 			chk_next_handle(e, i) ? res = 1 : 0;
@@ -85,6 +85,5 @@ int		validate_input(t_env *e)
 		return (0);
 	if (!chk_next_i(e))
 		return (0);
-
 	return (res);
 }

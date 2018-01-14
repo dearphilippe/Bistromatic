@@ -34,7 +34,6 @@ int			check_doublon(char *str)
 
 	i = 0;
 	j = 0;
-
 	ft_bzero(tmp, ft_strlen(str));
 	while (str[i])
 	{
@@ -48,7 +47,7 @@ int			check_doublon(char *str)
 	return (1);
 }
 
-int	check_brackets(char *s)
+int			check_brackets(char *s)
 {
 	int i;
 

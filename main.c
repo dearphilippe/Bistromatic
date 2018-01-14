@@ -26,15 +26,13 @@ static void		init(t_env *e)
 }
 
 /*
-
 ** get lenght of stdin (operations)
 ** get line of operations and store it
 ** rent a space for store the operations
 ** check if the lenght match
-
 */
 
-int			get_data(t_env *e, char ***av)
+int				get_data(t_env *e, char ***av)
 {
 	char	*line;
 
@@ -54,7 +52,6 @@ int			get_data(t_env *e, char ***av)
 /*
 ** char		echo[3] = {"3+6"};
 */
-
 /**
 ** Si la base est inferieur a 2
 **/
@@ -62,8 +59,8 @@ int			get_data(t_env *e, char ***av)
 int				main(int ac, char **av)
 {
 	t_env		e;
-	int i;
-	
+	int			i;
+
 	i = 1;
 	if (ac == 3)
 	{
@@ -88,7 +85,8 @@ int				main(int ac, char **av)
 	{
 		new_stack();
 	}
-		//ft_putstr("syntax error");
-
+	/**
+	**ft_putstr("syntax error");
+	**/
 	return (0);
 }

@@ -12,58 +12,51 @@
 
 #include "stack.h"
 
-int is_empty_stack(stack st)
+int			is_empty_stack(stack st)
 {
-	if(st == NULL)
+	if (st == NULL)
 		return (1);
-
 	return (0);
 }
 
-stack new_stack(void)
+stack		new_stack(void)
 {
-	return NULL;
+	return (NULL);
 }
 
-stack push_stack(t_env *e, stack st, char *c)
+stack		push_stack(t_env *e, stack st, char *c)
 {
 	s_stackToken *token;
 
 	token = malloc(sizeof(*token));
-
 	if (token == NULL)
 	{
 		ft_putstr("syntax error.\n");
 		e->status = 0;
 	}
-
 	token->c = c;
 	token->next = st;
-
-	return token;
+	return (token);
 }
 
-stack pop_stack(stack st)
+stack		pop_stack(stack st)
 {
 	s_stackToken *token;
 
 	if (is_empty_stack(st))
-		return new_stack();
-
+		return (new_stack());
 	token = st->next;
 	free(st);
-
-	return token;
+	return (token);
 }
 
-void print_stack(stack st)
+void		print_stack(stack st)
 {
 	if (is_empty_stack(st))
 	{
 		printf("Rien a afficher, la Pile est vide.\n");
-		return;
+		return ;
 	}
-
 	while (!is_empty_stack(st))
 	{
 		printf("[%d]\n", *st->c);
@@ -71,34 +64,32 @@ void print_stack(stack st)
 	}
 }
 
-int top_stack(stack st)
+int			top_stack(stack st)
 {
 	if (is_empty_stack(st))
 	{
 		printf("Aucun sommet, la Pile est vide.\n");
 		exit(EXIT_FAILURE);
 	}
-
-	return *st->c;
+	return (*st->c);
 }
 
-int stack_length(stack st)
+int			stack_length(stack st)
 {
-	int length = 0;
+	int length;
 
-	while (!is_empty_stack (st))
+	lenght = 0;
+	while (!is_empty_stack(st))
 	{
 		length++;
 		st = st->next;
 	}
-
-	return length;
+	return (length);
 }
 
-stack clear_stack(stack st)
+stack		clear_stack(stack st)
 {
 	while (!is_empty_stack(st))
 		st = pop_stack(st);
-
-	return new_stack();
+	return (new_stack());
 }

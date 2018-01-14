@@ -15,15 +15,16 @@
 int		is_predecence(char c, stack st)
 {
 	int i;
-	
+
 	i = 0;
-	if (c == st->c )
-	return (0);
+	if (c == st->c)
+		return (0);
 }
 
 int		parsing(t_env *e)
 {
-	int i;
+	int				i;
+	s_stackToken	*st;
 
 	i = 0;
 	s_stackToken *st = new_stack();
@@ -41,10 +42,9 @@ int		parsing(t_env *e)
 			push_queue(&e->input[i]);
 		if (ft_isops(e->input[i]))
 		{
-			while (!is_empty_stack(st) && st->c )
+			while (!is_empty_stack(st) && st->c)
 			// While there's an operator on the top of the stack with greater precedence:
-			{
-				
+			{		
 				// Pop operators from the stack onto the output queue
 				st = st->next;
 			}
@@ -58,10 +58,10 @@ int		parsing(t_env *e)
 			While there's not a left bracket at the top of the stack:
 				si je ne retrouve pas de paranthese ouverte c'est qu'il y a une erreur de synatxe, arreter le programme et sortir.
                      Pop operators from the stack onto the output queue.
-             Pop the left bracket from the stack and discard it
-			
+             Pop the left bracket from the stack and discard it			
 		*/
 		}
+
 		/*While there's operators on the stack, pop them to the queue */
 		i++;
 	}

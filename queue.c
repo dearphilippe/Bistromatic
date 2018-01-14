@@ -3,50 +3,52 @@
 /*                                                        :::      ::::::::   */
 /*   queue.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
+/*   By: prosa <prosa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/12 17:09:47 by passef            #+#    #+#             */
-/*   Updated: 2018/01/12 17:09:47 by passef           ###   ########.fr       */
+/*   Created: 2018/01/14 00:42:24 by prosa             #+#    #+#             */
+/*   Updated: 2018/01/14 00:42:24 by prosa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "queue.h"
 
-int is_empty_queue(void)
+int		is_empty_queue(void)
 {
-	if(first == NULL && last == NULL)
+	if (first == NULL && last == NULL)
 		return (1);
 
 	return (0);
 }
 
-int queue_length(void)
+int		queue_length(void)
 {
-	return nb_items;
+	return (nb_items);
 }
 
-int queue_first(void)
+int		queue_first(void)
 {
-	if(is_empty_queue())
+	if (is_empty_queue())
 		exit(1);
 
-	return *first->c;
+	return (*first->c);
 }
 
-int queue_last(void)
+int		queue_last(void)
 {
-	if(is_empty_queue())
+	if (is_empty_queue())
 		exit(1);
 
-	return *last->c;
+	return (*last->c);
 }
 
-void print_queue(void)
+void	print_queue(void)
 {
-	if(is_empty_queue())
+	t_queueItem *tmp;
+
+	if (is_empty_queue())
 	{
 		printf("Rien a afficher, la File est vide.\n");
-		return;
+		return ;
 	}
 
 	t_queueItem *tmp = first;
@@ -59,13 +61,13 @@ void print_queue(void)
 	printf("\n");
 }
 
-void push_queue(char *c)
+void	push_queue(char *c)
 {
 	t_queueItem *item;
 
 	item = malloc(sizeof(*item));
 
-	if(item == NULL)
+	if (item == NULL)
 	{
 		fprintf(stderr, "Erreur : probleme allocation dynamique.\n");
 		exit(EXIT_FAILURE);
@@ -74,7 +76,7 @@ void push_queue(char *c)
 	item->c = c;
 	item->next = NULL;
 
-	if(is_empty_queue())
+	if (is_empty_queue())
 	{
 		first = item;
 		last = item;
@@ -88,8 +90,10 @@ void push_queue(char *c)
 	nb_items++;
 }
 
-void pop_queue(void)
+void	pop_queue(void)
 {
+	t_queueItem *tmp;
+
 	if(is_empty_queue())
 	{
 		printf("Rien a retirer, la File est deja vide.\n");
@@ -98,7 +102,7 @@ void pop_queue(void)
 
 	t_queueItem *tmp = first;
 
-	if(first == last)
+	if (first == last)
 	{
 		first = NULL;
 		last = NULL;
@@ -110,14 +114,14 @@ void pop_queue(void)
 	nb_items--;
 }
 
-void clear_queue(void)
+void	clear_queue(void)
 {
-	if(is_empty_queue())
+	if (is_empty_queue())
 	{
 		printf("Rien a nettoyer, la File est deja vide.\n");
-		return;
+		return ;
 	}
 
-	while(!is_empty_queue())
+	while (!is_empty_queue())
 		pop_queue();
 }

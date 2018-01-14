@@ -6,19 +6,22 @@
 /*   By: passef <passef@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 13:19:18 by passef            #+#    #+#             */
-/*   Updated: 2018/01/13 23:38:19 by passef           ###   ########.fr       */
+/*   Updated: 2018/01/14 00:45:45 by passef           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bistromatic.h"
 
-int		is_predecence(char c, stack st)
+int		is_predecence(t_env *e, char c, stack st)
 {
 	int i;
 
 	i = 0;
-	if (c == st->c)
-		return (0);
+	while (e->express[i] != c)
+		i++;
+	if (i >= 2)
+		return (1);
+	return (0);
 }
 
 int		parsing(t_env *e)
@@ -42,9 +45,21 @@ int		parsing(t_env *e)
 			push_queue(&e->input[i]);
 		if (ft_isops(e->input[i]))
 		{
-			while (!is_empty_stack(st) && st->c)
+			while (!is_empty_stack(st))
 			// While there's an operator on the top of the stack with greater precedence:
-			{		
+			{
+				while (is_predecence(e, e->input[i], st))
+				{
+					push_queue(st->c);
+					pop_stack(st);
+					i++;
+				}
+				if (st->c == '+' || st->c == '-')
+				{
+					push_queue(st->c);
+					pop_stack(st);
+				}
+				i++;
 				// Pop operators from the stack onto the output queue
 				st = st->next;
 			}
